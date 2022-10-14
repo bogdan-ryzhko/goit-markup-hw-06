@@ -745,6 +745,26 @@ img {
 	margin-bottom: 4px;
 }
 
+.form-field>input,
+.form-field>input {
+	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field>input:focus,
+.form-field>input:focus-visible {
+	outline: 1px solid var(--brand-color);
+	border: 1px solid var(--brand-color);
+}
+
+.input-icon {
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field>input:focus+.input-icon,
+.form-field>input:focus-visible+.input-icon {
+	fill: var(--brand-color);
+}
+
 .form-input {
 	height: 40px;
 	padding: 10px 10px 10px 45px;
@@ -768,6 +788,13 @@ img {
 	font-size: 12px;
 	line-height: 1.17;
 	letter-spacing: 0.01em;
+	transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus,
+.form-textarea:focus-visible {
+	outline: 1px solid var(--brand-color);
+	border: 1px solid var(--brand-color);
 }
 
 .form-btn {
@@ -775,6 +802,7 @@ img {
 	background-color: var(--brand-color);
 	color: #ffffff;
 	max-width: 200px;
+	height: 50px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	margin: 0 auto;
