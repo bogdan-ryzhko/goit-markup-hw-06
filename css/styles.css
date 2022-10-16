@@ -18,6 +18,7 @@
 	--team-bg: #F5F4FA;
 	--card-list-gap: 27px;
 	--icon-color: #AFB1B8;
+	--timing-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -137,7 +138,7 @@ img {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--main-color);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--timing-transition);
 	padding: 32px 0;
 }
 
@@ -182,7 +183,7 @@ img {
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--timing-transition);
 }
 
 .main-link:hover,
@@ -240,7 +241,7 @@ img {
 	border-radius: 4px;
 	background-color: var(--brand-color);
 	font-weight: 700;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--timing-transition);
 }
 
 .hero-btn:hover,
@@ -387,7 +388,7 @@ img {
 	padding: 12px;
 	border-radius: 100%;
 	color: var(--icon-color);
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--timing-transition), color var(--timing-transition);
 }
 
 .team-soc-icon {
@@ -417,7 +418,7 @@ img {
 	height: 92px;
 	border: 1px solid var(--icon-color);
 	border-radius: 4px;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--timing-transition);
 	color: var(--icon-color);
 }
 
@@ -454,9 +455,9 @@ img {
 	background-color: var(--potfolio-btn-bg);
 	border-radius: 4px;
 	border: inherit;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--timing-transition),
+		color var(--timing-transition),
+		box-shadow var(--timing-transition);
 }
 
 .navigation-btn:hover,
@@ -487,7 +488,7 @@ img {
 .production-link {
 	display: inline-block;
 	border: 1px solid #EEEEEE;
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow var(--timing-transition);
 }
 
 .production-link:hover,
@@ -519,7 +520,7 @@ img {
 	letter-spacing: 0.03em;
 	color: var(--white-color);
 
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform var(--timing-transition);
 }
 
 .production-link:hover .production-text,
@@ -620,7 +621,7 @@ img {
 	align-items: center;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--timing-transition);
 }
 
 .footer-soc-icon {
@@ -650,7 +651,7 @@ img {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border var(--timing-transition);
 }
 
 .footer-input:focus,
@@ -673,7 +674,7 @@ img {
 	background-color: var(--brand-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--timing-transition);
 }
 
 .footer-subscribe:hover,
@@ -696,7 +697,7 @@ img {
 	background-color: rgba(0, 0, 0, 0.5);
 	opacity: 1;
 	visibility: visible;
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity var(--timing-transition), visibility var(--timing-transition);
 }
 
 .backdrop.is-hidden {
@@ -736,7 +737,7 @@ img {
 	min-width: 11px;
 	height: 11px;
 	fill: currentColor;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--timing-transition);
 }
 
 .close-btn-modal:hover .close-btn-icon,
@@ -776,7 +777,7 @@ img {
 
 .form-link {
 	color: var(--brand-color);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--timing-transition);
 	margin-left: 3px;
 }
 
@@ -805,7 +806,7 @@ img {
 
 .form-field>input,
 .form-field>input {
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border var(--timing-transition);
 }
 
 .form-field>input:focus,
@@ -815,7 +816,7 @@ img {
 }
 
 .input-icon {
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: fill var(--timing-transition);
 }
 
 .form-field>input:focus+.input-icon,
@@ -846,7 +847,7 @@ img {
 	font-size: 12px;
 	line-height: 1.17;
 	letter-spacing: 0.01em;
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border var(--timing-transition);
 }
 
 .form-textarea:focus,
@@ -887,7 +888,7 @@ img {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	margin: 0 auto;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--timing-transition);
 }
 
 .form-btn:hover,
