@@ -484,8 +484,6 @@ img {
 	background-color: var(--white-color);
 }
 
-.production-list>.production-item:last-child {}
-
 .production-link {
 	display: inline-block;
 	border: 1px solid #EEEEEE;
@@ -772,10 +770,19 @@ img {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: #757575;
+	display: flex;
+	align-items: center;
 }
 
 .form-link {
 	color: var(--brand-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	margin-left: 3px;
+}
+
+.form-link:hover {
+	color: var(--hover-btn);
+	text-decoration: none;
 }
 
 .form-field {
@@ -846,6 +853,29 @@ img {
 .form-textarea:focus-visible {
 	outline: none;
 	border: 1px solid var(--brand-color);
+}
+
+.form-checkbox {
+	appearance: none;
+	position: absolute;
+}
+
+.icon {
+	display: inline-block;
+	border: 2px solid var(--main-color);
+	width: 15px;
+	height: 15px;
+	border-radius: 3px;
+	margin-right: 7px;
+}
+
+.form-checkbox:checked+.icon {
+	background-image: url('../images/icon-check.svg');
+	background-color: var(--brand-color);
+	background-size: cover;
+	background-position: center;
+	background-origin: border-box;
+	border: none;
 }
 
 .form-btn {
