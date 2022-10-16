@@ -562,10 +562,7 @@ img {
 .footer-inner {
 	display: flex;
 	align-items: baseline;
-}
-
-.footer-inner-content+.footer-inner-content {
-	margin-left: 70px;
+	justify-content: space-between;
 }
 
 .footer-logo {
@@ -710,7 +707,7 @@ img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	padding: 10px;
+	padding: 40px;
 	transform: translate(-50%, -50%);
 	width: 528px;
 	background-color: #fff;
@@ -748,8 +745,7 @@ img {
 
 .modal-title {
 	text-align: center;
-	margin-top: 40px;
-	margin-bottom: 30px;
+	margin-bottom: 12px;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 1.15;
@@ -759,9 +755,6 @@ img {
 .modal-form {
 	display: flex;
 	flex-direction: column;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 40px;
 }
 
 .modal-form>label {
@@ -773,6 +766,7 @@ img {
 	color: #757575;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .form-link {
@@ -793,7 +787,7 @@ img {
 }
 
 .form-field+.form-field {
-	margin-top: 28px;
+	margin-top: 10px;
 }
 
 .form-field>label {
@@ -804,29 +798,30 @@ img {
 	margin-bottom: 4px;
 }
 
-.form-field>input,
-.form-field>input {
+.input-wrapper>input,
+.input-wrapper>input {
 	transition: border var(--timing-transition);
 }
 
-.form-field>input:focus,
-.form-field>input:focus-visible {
+.input-wrapper>input:focus,
+.input-wrapper>input:focus-visible {
 	outline: none;
 	border: 1px solid var(--brand-color);
 }
 
-.input-icon {
-	transition: fill var(--timing-transition);
+.input-wrapper {
+	position: relative;
 }
 
-.form-field>input:focus+.input-icon,
-.form-field>input:focus-visible+.input-icon {
+.input-wrapper>input:focus+.input-icon,
+.input-wrapper>input:focus-visible+.input-icon {
 	fill: var(--brand-color);
 }
 
 .form-input {
 	height: 40px;
-	padding: 10px 10px 10px 45px;
+	padding: 10px 10px 10px 40px;
+	width: 100%;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
 }
@@ -834,8 +829,9 @@ img {
 .input-icon {
 	position: absolute;
 	top: 50%;
-	left: 24px;
-	transform: translate(-50%);
+	left: 15px;
+	transform: translateY(-50%);
+	transition: fill var(--timing-transition);
 }
 
 .form-textarea {
@@ -882,7 +878,9 @@ img {
 .form-btn {
 	padding: 10px 52px;
 	background-color: var(--brand-color);
-	color: #ffffff;
+	font-weight: 700;
+	color: var(--white-color);
+	letter-spacing: 0.06em;
 	max-width: 200px;
 	height: 50px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
